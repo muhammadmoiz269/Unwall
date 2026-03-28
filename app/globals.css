@@ -94,10 +94,54 @@ button {
   background-clip: text;
 }
 
-.navbar-links {
+.navbar-links,
+.navbar-right {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+}
+
+/* Built By Tag */
+.built-by-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--uw-border);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 12px;
+  color: var(--uw-text-muted);
+  transition: all var(--uw-transition);
+  white-space: nowrap;
+}
+
+.built-by-tag:hover {
+  border-color: #0a66c2;
+  background: rgba(10, 102, 194, 0.08);
+  color: var(--uw-text);
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.15);
+}
+
+.built-by-tag strong {
+  color: var(--uw-text);
+  font-weight: 700;
+}
+
+.built-by-tag:hover strong {
+  color: #5eb5ff;
+}
+
+.linkedin-icon {
+  width: 14px;
+  height: 14px;
+  color: #0a66c2;
+  flex-shrink: 0;
+  transition: transform var(--uw-transition);
+}
+
+.built-by-tag:hover .linkedin-icon {
+  transform: scale(1.15);
 }
 
 .nav-link {
@@ -953,6 +997,52 @@ button {
   height: 18px;
 }
 
+/* ── Feedback Floating Button ─────────────── */
+
+.feedback-fab {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 90;
+  box-shadow: 0 4px 24px rgba(10, 102, 194, 0.3);
+  transition: all var(--uw-transition);
+  animation: fabSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1s both;
+}
+
+.feedback-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(10, 102, 194, 0.45);
+  background: linear-gradient(135deg, #0b7ad6 0%, #0a66c2 100%);
+}
+
+.feedback-fab svg {
+  flex-shrink: 0;
+}
+
+.feedback-fab span {
+  white-space: nowrap;
+}
+
+@keyframes fabSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* ── Footer ────────────────────────────────── */
 
 .footer {
@@ -965,9 +1055,49 @@ button {
   border-top: 1px solid var(--uw-border);
 }
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .footer-text {
   font-size: 13px;
   color: var(--uw-text-dim);
+}
+
+.footer-built-by {
+  font-size: 12px;
+  color: var(--uw-text-dim);
+  transition: color var(--uw-transition);
+}
+
+.footer-built-by:hover {
+  color: #5eb5ff;
+}
+
+.footer-built-by strong {
+  color: var(--uw-text-muted);
+  font-weight: 600;
+  transition: color var(--uw-transition);
+}
+
+.footer-built-by:hover strong {
+  color: #5eb5ff;
+}
+
+.footer-divider {
+  color: var(--uw-text-dim);
+  font-size: 14px;
+  user-select: none;
+}
+
+.linkedin-icon-sm {
+  width: 12px;
+  height: 12px;
+  color: #0a66c2;
+  margin-right: 4px;
+  vertical-align: -1px;
 }
 
 .footer-links {
@@ -1366,5 +1496,27 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .built-by-tag span {
+    display: none;
+  }
+
+  .built-by-tag {
+    padding: 6px 10px;
+    gap: 4px;
+  }
+
+  .feedback-fab {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    justify-content: center;
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .footer-left {
+    align-items: center;
   }
 }

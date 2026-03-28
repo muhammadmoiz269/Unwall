@@ -96,7 +96,19 @@ export default function Dashboard() {
           </svg>
           <span className="brand-text">Unwall</span>
         </div>
-        <div className="navbar-links">
+        <div className="navbar-right">
+          <a
+            href="https://www.linkedin.com/in/muhammad-moiz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="built-by-tag"
+          >
+            <span>Built with ⚡ by</span>
+            <strong>Muhammad Moiz</strong>
+            <svg className="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
           <span className="nav-link active">Dashboard</span>
         </div>
       </nav>
@@ -244,15 +256,50 @@ export default function Dashboard() {
         )}
       </main>
 
+      {/* Feedback Floating Button */}
+      <a
+        href="https://www.linkedin.com/in/muhammad-moiz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="feedback-fab"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+        </svg>
+        <span>Bug or feature idea? Let&apos;s connect</span>
+      </a>
+
       {/* Footer */}
       <footer className="footer">
-        <span className="footer-text">
-          © {new Date().getFullYear()} Unwall. Read Medium articles without walls.
-        </span>
+        <div className="footer-left">
+          <span className="footer-text">
+            © {new Date().getFullYear()} Unwall. Read Medium articles without walls.
+          </span>
+          <a
+            href="https://www.linkedin.com/in/muhammad-moiz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-built-by"
+          >
+            Built with ⚡ by <strong>Muhammad Moiz</strong>
+          </a>
+        </div>
         <div className="footer-links">
           <Link href="/privacy-policy" className="footer-link">
             Privacy Policy
           </Link>
+          <span className="footer-divider">·</span>
+          <a
+            href="https://www.linkedin.com/in/muhammad-moiz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            <svg className="linkedin-icon-sm" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+          </a>
         </div>
       </footer>
 
