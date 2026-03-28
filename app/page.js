@@ -249,6 +249,11 @@ export default function Dashboard() {
         <span className="footer-text">
           © {new Date().getFullYear()} Unwall. Read Medium articles without walls.
         </span>
+        <div className="footer-links">
+          <Link href="/privacy-policy" className="footer-link">
+            Privacy Policy
+          </Link>
+        </div>
       </footer>
 
       {/* Toast Notifications */}
